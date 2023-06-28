@@ -17,6 +17,7 @@ public class ConcreteProxyConfig {
         OrderControllerV2 controllerImpl = new OrderControllerV2(orderServiceV2(logTrace));
         return new OrderControllerConcreteProxy(controllerImpl, logTrace);
     }
+
     @Bean
     public OrderServiceV2 orderServiceV2(LogTrace logTrace) {
         OrderServiceV2 serviceImpl = new OrderServiceV2(orderRepositoryV2(logTrace));
